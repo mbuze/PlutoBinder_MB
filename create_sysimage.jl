@@ -1,12 +1,12 @@
 using PackageCompiler
 create_sysimage([:Pluto, :PlutoUI,
-                 :CodeTracking, :Combinatorics,
-                 :DataFrames, :Distributions,
-                 :FixedEffectModels, :ForwardDiff, :GLM,
-                 :InteractiveUtils, :LineSearches,
-                 :LinearMaps, :Markdown, :NLsolve,
-                 :OffsetArrays, :Optim, :PrettyTables,
-                 :Revise, :StatsPlots];
+                 :Markdown, :Plots,
+                 :PythonCall, :PlutoTeachingTolls,
+                 :HypertextLiteral, :ForwardDiff, :Distances,
+                 :LinearAlgebra, :Random,
+                 :Optim, :Statistics, :Distributions,
+                 :BifurcationKit, :OptimalTransport, :ApproxFun,
+                 :GaussianProcesses, :CondaPkg];
                 #precompile_execution_file = "warmup.jl",
                 precompile_statements_file = "combined_trace.jl",
                 #replace_default = true,
