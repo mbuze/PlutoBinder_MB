@@ -1,7 +1,7 @@
 using PackageCompiler
 create_sysimage([:Pluto, :PlutoUI,
                  :Markdown, :Plots,
-                 :PythonCall, :PlutoTeachingTolls,
+                 :PythonCall, :PlutoTeachingTools,
                  :HypertextLiteral, :ForwardDiff, :Distances,
                  :LinearAlgebra, :Random,
                  :Optim, :Statistics, :Distributions,
