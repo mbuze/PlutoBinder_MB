@@ -5,7 +5,7 @@ USER root
 
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache jupyter-server 'jupyter-server<3.0.0' && \
-    pip install --no-cache 'jupyterlab<4.0.0'
+    pip install --no-cache jupyter-server-proxy
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends wget && \
@@ -25,8 +25,7 @@ COPY --chown=${NB_USER}:users ./Manifest.toml ./Manifest.toml
 COPY --chown=${NB_USER}:users ./combined_trace.jl ./combined_trace.jl
 COPY --chown=${NB_USER}:users ./create_sysimage.jl ./create_sysimage.jl
 
-RUN jupyter labextension install @jupyterlab/server-proxy && \
-    jupyter lab build && \
+RUN jupyter lab build && \
     jupyter lab clean && \
     pip install . --no-cache-dir && \
     rm -rf ~/.cache
