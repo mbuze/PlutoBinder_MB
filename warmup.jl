@@ -1,5 +1,4 @@
-#import OptimalTransport
-#import Dialysis
+import OptimalTransport
 
 #try
 #  include(joinpath(pkgdir(BLPDemand), "test", "runtests.jl"))

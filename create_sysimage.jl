@@ -7,7 +7,7 @@ create_sysimage([:Pluto, :PlutoUI,
                  :Optim, :Statistics, :Distributions,
                  :BifurcationKit, :OptimalTransport, :ApproxFun,
                  :GaussianProcesses, :CondaPkg];
-                #precompile_execution_file = "warmup.jl",
+                precompile_execution_file = "warmup.jl",
                 precompile_statements_file = "combined_trace.jl",
                 replace_default = true,
                 sysimage_path="/home/jovyan/sysimage.so",
